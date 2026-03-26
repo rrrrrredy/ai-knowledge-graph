@@ -1,0 +1,56 @@
+[
+  {
+    "source": "deepseek",
+    "target": "deepseek",
+    "relation": "develops",
+    "weight": 12
+  },
+  {
+    "source": "字节跳动",
+    "target": "bytedance_seed",
+    "relation": "belongs_to",
+    "weight": 3
+  },
+  {
+    "source": "腾讯",
+    "target": "hunyuan",
+    "relation": "develops",
+    "weight": 1
+  },
+  {
+    "source": "openai",
+    "target": "chatgpt",
+    "relation": "develops",
+    "weight": 1
+  },
+  {
+    "source": "快手",
+    "target": "kling",
+    "relation": "develops",
+    "weight": 3
+  },
+  {
+    "source": "字节跳动",
+    "target": "doubao",
+    "relation": "develops",
+    "weight": 2
+  },
+  {
+    "source": "openai",
+    "target": "deep_research",
+    "relation": "develops",
+    "weight": 2
+  },
+  {
+    "source": "字节跳动",
+    "target": "coze",
+    "relation": "develops",
+    "weight": 1
+  },
+  {
+    "source": "openai",
+    "target": "openai_o1",
+    "relation": "develops",
+    "weight": 3
+  }
+]

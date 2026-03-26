@@ -1,13 +1,14 @@
 /* ============================================
    AI Knowledge Graph - Ranking page
+   v2: type-colored bars, click-to-graph, extra info
    ============================================ */
 
-const TYPE_COLOR = {
-  company: 'var(--color-company)',
-  product: 'var(--color-product)',
-  person:  'var(--color-person)',
-  tech:    'var(--color-tech)',
-  paper:   'var(--color-paper)',
+const TYPE_COLOR_HEX = {
+  company: '#f78166',
+  product: '#79c0ff',
+  person:  '#d2a8ff',
+  tech:    '#56d364',
+  paper:   '#e3b341',
 };
 
 const TYPE_LABEL = {
@@ -18,19 +19,36 @@ const TYPE_LABEL = {
   paper:   '论文',
 };
 
-let allNodes = [];
+let allNodes = [], allEdges = [];
 let activeType = 'product';
 
 async function loadData() {
-  const [nodesRes, metaRes] = await Promise.all([
+  const [nodesRes, edgesRes, metaRes] = await Promise.all([
     fetch('data/nodes.json'),
+    fetch('data/edges.json'),
     fetch('data/meta.json'),
   ]);
   allNodes = await nodesRes.json();
+  allEdges = await edgesRes.json();
   const meta = await metaRes.json();
+
   document.getElementById('nav-meta').textContent =
     `${allNodes.length} 节点 · 更新于 ${meta.updatedAt || '–'}`;
+
+  // Build edge count index
+  buildEdgeIndex();
   renderRanking(activeType);
+}
+
+// Pre-compute edge count per node
+const edgeCountMap = {};
+function buildEdgeIndex() {
+  allEdges.forEach(e => {
+    const s = e.source.id || e.source;
+    const t = e.target.id || e.target;
+    edgeCountMap[s] = (edgeCountMap[s] || 0) + 1;
+    edgeCountMap[t] = (edgeCountMap[t] || 0) + 1;
+  });
 }
 
 function renderRanking(type) {
@@ -40,6 +58,7 @@ function renderRanking(type) {
 
   const maxCount = nodes[0]?.count || 1;
   const content = document.getElementById('ranking-content');
+  const color = TYPE_COLOR_HEX[type] || '#58a6ff';
 
   if (!nodes.length) {
     content.innerHTML = `<div class="empty">
@@ -51,13 +70,14 @@ function renderRanking(type) {
 
   const items = nodes.map((n, i) => {
     const rank = i + 1;
-    const rankClass = rank === 1 ? 'top1' : rank === 2 ? 'top2' : rank === 3 ? 'top3' : 'other';
     const rankNum = rank <= 3 ? ['🥇','🥈','🥉'][rank - 1] : rank;
+    const rankClass = rank <= 3 ? `top${rank}` : 'other';
     const pct = Math.round((n.count / maxCount) * 100);
-    const color = TYPE_COLOR[n.type] || '#888';
-    const desc = n.desc ? n.desc.slice(0, 60) + (n.desc.length > 60 ? '…' : '') : '';
+    const edges = edgeCountMap[n.id] || 0;
+    const desc = n.desc ? n.desc.slice(0, 70) + (n.desc.length > 70 ? '…' : '') : '';
+    const sources = (n.sources || []).length;
 
-    return `<div class="rank-item" onclick="window.location='index.html#node=${encodeURIComponent(n.id)}'">
+    return `<div class="rank-item" onclick="goToGraph('${encodeURIComponent(n.id)}')">
       <div class="rank-num ${rankClass}">${rankNum}</div>
       <div class="rank-info">
         <div class="rank-name">
@@ -65,17 +85,25 @@ function renderRanking(type) {
           <span class="badge badge-${n.type}">${TYPE_LABEL[n.type] || n.type}</span>
         </div>
         ${desc ? `<div class="rank-desc">${desc}</div>` : ''}
+        <div class="rank-meta-row">
+          ${edges ? `<span class="rank-meta-pill">🔗 ${edges} 关联</span>` : ''}
+          ${sources ? `<span class="rank-meta-pill">📄 ${sources} 篇文档</span>` : ''}
+        </div>
       </div>
       <div class="rank-bar-wrap">
         <div class="rank-bar-bg">
           <div class="rank-bar-fill" style="width:${pct}%;background:${color}"></div>
         </div>
-        <div class="rank-count">${n.count} 次提及</div>
+        <div class="rank-count" style="color:${color}">${n.count} <span style="color:var(--text3)">次提及</span></div>
       </div>
     </div>`;
   }).join('');
 
   content.innerHTML = `<div class="ranking-list">${items}</div>`;
+}
+
+function goToGraph(encodedId) {
+  window.location = `index.html#node=${encodedId}`;
 }
 
 // Tab switching
