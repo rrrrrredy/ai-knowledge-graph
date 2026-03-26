@@ -45,6 +45,16 @@
     "relation": "made_by"
   },
   {
+    "source": "Operator",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "Deep Research",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
     "source": "Claude",
     "target": "Anthropic",
     "relation": "made_by"
@@ -65,7 +75,27 @@
     "relation": "made_by"
   },
   {
+    "source": "Claude Opus",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
+    "source": "Claude Sonnet",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
     "source": "Gemini",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
+    "source": "Gemini Pro",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
+    "source": "Gemini Flash",
     "target": "Google",
     "relation": "made_by"
   },
@@ -80,12 +110,22 @@
     "relation": "made_by"
   },
   {
+    "source": "NotebookLM",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
     "source": "LLaMA",
     "target": "Meta",
     "relation": "made_by"
   },
   {
     "source": "Llama",
+    "target": "Meta",
+    "relation": "made_by"
+  },
+  {
+    "source": "Llama 2",
     "target": "Meta",
     "relation": "made_by"
   },
@@ -101,6 +141,16 @@
   },
   {
     "source": "DeepSeek",
+    "target": "深度求索",
+    "relation": "made_by"
+  },
+  {
+    "source": "DeepSeek-V2",
+    "target": "深度求索",
+    "relation": "made_by"
+  },
+  {
+    "source": "DeepSeek-R1",
     "target": "深度求索",
     "relation": "made_by"
   },
@@ -125,6 +175,16 @@
     "relation": "made_by"
   },
   {
+    "source": "通义",
+    "target": "阿里",
+    "relation": "made_by"
+  },
+  {
+    "source": "通义万相",
+    "target": "阿里",
+    "relation": "made_by"
+  },
+  {
     "source": "混元",
     "target": "腾讯",
     "relation": "made_by"
@@ -138,5 +198,380 @@
     "source": "可灵",
     "target": "快手",
     "relation": "made_by"
+  },
+  {
+    "source": "Kling",
+    "target": "快手",
+    "relation": "made_by"
+  },
+  {
+    "source": "Mistral",
+    "target": "Mistral",
+    "relation": "made_by"
+  },
+  {
+    "source": "Mixtral",
+    "target": "Mistral",
+    "relation": "made_by"
+  },
+  {
+    "source": "GitHub Copilot",
+    "target": "Microsoft",
+    "relation": "made_by"
+  },
+  {
+    "source": "Copilot",
+    "target": "Microsoft",
+    "relation": "made_by"
+  },
+  {
+    "source": "vLLM",
+    "target": "Berkeley",
+    "relation": "made_by"
+  },
+  {
+    "source": "Sam Altman",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "Greg Brockman",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "Ilya Sutskever",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "Demis Hassabis",
+    "target": "Google DeepMind",
+    "relation": "works_at"
+  },
+  {
+    "source": "Yann LeCun",
+    "target": "Meta",
+    "relation": "works_at"
+  },
+  {
+    "source": "Andrej Karpathy",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "Noam Brown",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "Jim Fan",
+    "target": "NVIDIA",
+    "relation": "works_at"
+  },
+  {
+    "source": "Alec Radford",
+    "target": "OpenAI",
+    "relation": "works_at"
+  },
+  {
+    "source": "王小川",
+    "target": "百川智能",
+    "relation": "works_at"
+  },
+  {
+    "source": "RAG",
+    "target": "LLM",
+    "relation": "enhances"
+  },
+  {
+    "source": "LoRA",
+    "target": "微调",
+    "relation": "is_method_of"
+  },
+  {
+    "source": "RLHF",
+    "target": "强化学习",
+    "relation": "is_variant_of"
+  },
+  {
+    "source": "DPO",
+    "target": "强化学习",
+    "relation": "is_variant_of"
+  },
+  {
+    "source": "PPO",
+    "target": "强化学习",
+    "relation": "is_method_of"
+  },
+  {
+    "source": "Agent",
+    "target": "LLM",
+    "relation": "powered_by"
+  },
+  {
+    "source": "AI Agent",
+    "target": "LLM",
+    "relation": "powered_by"
+  },
+  {
+    "source": "多智能体",
+    "target": "Agent",
+    "relation": "extends"
+  },
+  {
+    "source": "MCP",
+    "target": "Agent",
+    "relation": "enables"
+  },
+  {
+    "source": "MCP协议",
+    "target": "Agent",
+    "relation": "enables"
+  },
+  {
+    "source": "Transformer",
+    "target": "注意力机制",
+    "relation": "uses"
+  },
+  {
+    "source": "扩散模型",
+    "target": "文生图",
+    "relation": "enables"
+  },
+  {
+    "source": "Scaling Law",
+    "target": "LLM",
+    "relation": "describes"
+  },
+  {
+    "source": "测试时计算",
+    "target": "推理模型",
+    "relation": "improves"
+  },
+  {
+    "source": "思维链",
+    "target": "推理模型",
+    "relation": "technique_of"
+  },
+  {
+    "source": "CoT",
+    "target": "思维链",
+    "relation": "abbrev_of"
+  },
+  {
+    "source": "AGI",
+    "target": "超级智能",
+    "relation": "related_to"
+  },
+  {
+    "source": "对齐",
+    "target": "安全",
+    "relation": "part_of"
+  },
+  {
+    "source": "Alignment",
+    "target": "对齐",
+    "relation": "abbrev_of"
+  },
+  {
+    "source": "世界模型",
+    "target": "具身智能",
+    "relation": "enables"
+  },
+  {
+    "source": "VLM",
+    "target": "多模态",
+    "relation": "is_type_of"
+  },
+  {
+    "source": "RAG",
+    "target": "向量数据库",
+    "relation": "uses"
+  },
+  {
+    "source": "Knowledge Distillation",
+    "target": "蒸馏",
+    "relation": "same_as"
+  },
+  {
+    "source": "Fine-tuning",
+    "target": "微调",
+    "relation": "same_as"
+  },
+  {
+    "source": "OpenAI",
+    "target": "Anthropic",
+    "relation": "competes_with"
+  },
+  {
+    "source": "OpenAI",
+    "target": "Google",
+    "relation": "competes_with"
+  },
+  {
+    "source": "OpenAI",
+    "target": "Meta",
+    "relation": "competes_with"
+  },
+  {
+    "source": "Anthropic",
+    "target": "Google",
+    "relation": "competes_with"
+  },
+  {
+    "source": "阿里",
+    "target": "腾讯",
+    "relation": "competes_with"
+  },
+  {
+    "source": "阿里",
+    "target": "字节跳动",
+    "relation": "competes_with"
+  },
+  {
+    "source": "百度",
+    "target": "字节跳动",
+    "relation": "competes_with"
+  },
+  {
+    "source": "深度求索",
+    "target": "OpenAI",
+    "relation": "competes_with"
+  },
+  {
+    "source": "月之暗面",
+    "target": "百度",
+    "relation": "competes_with"
+  },
+  {
+    "source": "Ilya Sutskever",
+    "target": "预训练",
+    "relation": "researches"
+  },
+  {
+    "source": "Ilya Sutskever",
+    "target": "Scaling Law",
+    "relation": "researches"
+  },
+  {
+    "source": "Yann LeCun",
+    "target": "世界模型",
+    "relation": "researches"
+  },
+  {
+    "source": "Yann LeCun",
+    "target": "具身智能",
+    "relation": "researches"
+  },
+  {
+    "source": "Yoshua Bengio",
+    "target": "对齐",
+    "relation": "researches"
+  },
+  {
+    "source": "Yoshua Bengio",
+    "target": "安全",
+    "relation": "researches"
+  },
+  {
+    "source": "Richard Sutton",
+    "target": "强化学习",
+    "relation": "researches"
+  },
+  {
+    "source": "Andrej Karpathy",
+    "target": "LLM",
+    "relation": "researches"
+  },
+  {
+    "source": "Andrej Karpathy",
+    "target": "AI编程",
+    "relation": "researches"
+  },
+  {
+    "source": "Noam Brown",
+    "target": "强化学习",
+    "relation": "researches"
+  },
+  {
+    "source": "Noam Brown",
+    "target": "推理模型",
+    "relation": "researches"
+  },
+  {
+    "source": "OpenAI",
+    "target": "AGI",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "OpenAI",
+    "target": "超级智能",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "OpenAI",
+    "target": "对齐",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "Anthropic",
+    "target": "对齐",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "Anthropic",
+    "target": "安全",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "DeepMind",
+    "target": "强化学习",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "DeepMind",
+    "target": "具身智能",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "DeepMind",
+    "target": "世界模型",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "Meta",
+    "target": "开源",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "Meta",
+    "target": "LLaMA",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "NVIDIA",
+    "target": "端侧模型",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "深度求索",
+    "target": "开源",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "深度求索",
+    "target": "强化学习",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "百度",
+    "target": "文生图",
+    "relation": "focuses_on"
+  },
+  {
+    "source": "快手",
+    "target": "文生视频",
+    "relation": "focuses_on"
   }
 ]
