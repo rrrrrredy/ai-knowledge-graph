@@ -9,6 +9,7 @@ const TYPE_COLOR = {
   product: 'var(--color-product)',
   person:  'var(--color-person)',
   tech:    'var(--color-tech)',
+  concept: 'var(--color-tech)',
   paper:   'var(--color-paper)',
 };
 
@@ -17,6 +18,7 @@ const TYPE_COLOR_HEX = {
   product: '#79c0ff',
   person:  '#d2a8ff',
   tech:    '#56d364',
+  concept: '#56d364',
   paper:   '#e3b341',
 };
 
@@ -25,6 +27,7 @@ const TYPE_LABEL = {
   product: '产品',
   person:  '人物',
   tech:    '技术概念',
+  concept: '技术概念',
   paper:   '论文',
 };
 
