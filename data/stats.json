@@ -1,0 +1,20 @@
+{
+  "total_docs": 212,
+  "total_nodes": 3968,
+  "total_edges": 2013,
+  "doc_types": {
+    "topic_research": 110,
+    "paper_digest": 61,
+    "agent_methodology": 25,
+    "weekly_report": 6,
+    "learning_resources": 2,
+    "monthly_report": 8
+  },
+  "entity_types": {
+    "company": 397,
+    "product": 1342,
+    "person": 401,
+    "concept": 1735,
+    "paper": 93
+  }
+}
