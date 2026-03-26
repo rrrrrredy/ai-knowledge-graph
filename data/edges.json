@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "source": "GPT-4",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "GPT-4o",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "GPT-5",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "ChatGPT",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "o1",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "o3",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "DALL-E",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "Sora",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "Codex",
+    "target": "OpenAI",
+    "relation": "made_by"
+  },
+  {
+    "source": "Claude",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
+    "source": "Claude 3",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
+    "source": "Claude 3.5",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
+    "source": "Claude 4",
+    "target": "Anthropic",
+    "relation": "made_by"
+  },
+  {
+    "source": "Gemini",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
+    "source": "Gemma",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
+    "source": "Bard",
+    "target": "Google",
+    "relation": "made_by"
+  },
+  {
+    "source": "LLaMA",
+    "target": "Meta",
+    "relation": "made_by"
+  },
+  {
+    "source": "Llama",
+    "target": "Meta",
+    "relation": "made_by"
+  },
+  {
+    "source": "Llama 3",
+    "target": "Meta",
+    "relation": "made_by"
+  },
+  {
+    "source": "豆包",
+    "target": "字节跳动",
+    "relation": "made_by"
+  },
+  {
+    "source": "DeepSeek",
+    "target": "深度求索",
+    "relation": "made_by"
+  },
+  {
+    "source": "文心一言",
+    "target": "百度",
+    "relation": "made_by"
+  },
+  {
+    "source": "ERNIE",
+    "target": "百度",
+    "relation": "made_by"
+  },
+  {
+    "source": "通义千问",
+    "target": "阿里",
+    "relation": "made_by"
+  },
+  {
+    "source": "Qwen",
+    "target": "阿里",
+    "relation": "made_by"
+  },
+  {
+    "source": "混元",
+    "target": "腾讯",
+    "relation": "made_by"
+  },
+  {
+    "source": "Kimi",
+    "target": "月之暗面",
+    "relation": "made_by"
+  },
+  {
+    "source": "可灵",
+    "target": "快手",
+    "relation": "made_by"
+  }
+]
