@@ -1,0 +1,12 @@
+{
+  "docCount": 0,
+  "nodeCount": 0,
+  "edgeCount": 0,
+  "updatedAt": "提取中…",
+  "categories": {
+    "周报": { "count": 0, "desc": "AI行业周报，海内外动态", "docs": [] },
+    "论文推荐": { "count": 0, "desc": "每周论文推荐精选", "docs": [] },
+    "月度观察": { "count": 0, "desc": "AI行业月度深度观察", "docs": [] },
+    "专题研究": { "count": 0, "desc": "公司全景解析、技术专题等", "docs": [] }
+  }
+}

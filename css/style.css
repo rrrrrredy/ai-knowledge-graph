@@ -1,0 +1,247 @@
+/* ============================================
+   AI Knowledge Graph - Global Styles
+   Dark theme, inspired by funeralai.cc
+   ============================================ */
+
+:root {
+  --bg: #0d1117;
+  --bg2: #161b22;
+  --bg3: #21262d;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --text3: #484f58;
+  --accent: #58a6ff;
+  --accent2: #388bfd;
+
+  /* Node type colors */
+  --color-company: #f78166;
+  --color-product: #79c0ff;
+  --color-person: #d2a8ff;
+  --color-tech: #56d364;
+  --color-paper: #e3b341;
+
+  --radius: 8px;
+  --radius-lg: 12px;
+  --transition: 0.2s ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- Nav ---- */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  gap: 32px;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-brand span { color: var(--accent); }
+
+.nav-links { display: flex; gap: 4px; }
+
+.nav-links a {
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  color: var(--text2);
+  transition: var(--transition);
+  font-size: 13px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background: var(--bg3);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-meta {
+  margin-left: auto;
+  color: var(--text3);
+  font-size: 12px;
+}
+
+/* ---- Page layout ---- */
+.page { padding-top: 56px; height: 100vh; }
+
+/* ---- Type badge ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.badge-company  { color: var(--color-company);  border-color: var(--color-company);  background: rgba(247,129,102,.1); }
+.badge-product  { color: var(--color-product);  border-color: var(--color-product);  background: rgba(121,192,255,.1); }
+.badge-person   { color: var(--color-person);   border-color: var(--color-person);   background: rgba(210,168,255,.1); }
+.badge-tech     { color: var(--color-tech);     border-color: var(--color-tech);     background: rgba(86,211,100,.1);  }
+.badge-paper    { color: var(--color-paper);    border-color: var(--color-paper);    background: rgba(227,179,65,.1);  }
+
+/* ---- Filter chips ---- */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  cursor: pointer;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.chip:hover { border-color: var(--accent); color: var(--text); }
+.chip.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.chip.chip-company.active  { background: var(--color-company);  border-color: var(--color-company); }
+.chip.chip-product.active  { background: var(--color-product);  border-color: var(--color-product); color: #0d1117; }
+.chip.chip-person.active   { background: var(--color-person);   border-color: var(--color-person);  color: #0d1117; }
+.chip.chip-tech.active     { background: var(--color-tech);     border-color: var(--color-tech);    color: #0d1117; }
+.chip.chip-paper.active    { background: var(--color-paper);    border-color: var(--color-paper);   color: #0d1117; }
+
+/* ---- Search ---- */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 12px 8px 36px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  width: 220px;
+  transition: var(--transition);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent);
+  width: 280px;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text3);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ---- Panel ---- */
+.panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.panel-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header h3 { font-size: 14px; font-weight: 600; }
+
+.panel-body { padding: 16px 20px; }
+
+/* ---- Stats bar ---- */
+.stats-bar {
+  display: flex;
+  gap: 24px;
+}
+
+.stat { text-align: center; }
+.stat-value { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--text2); margin-top: 2px; }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+/* ---- Loading ---- */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  color: var(--text2);
+}
+
+.spinner {
+  width: 32px; height: 32px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---- Tooltip ---- */
+.tooltip {
+  position: fixed;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text);
+  pointer-events: none;
+  z-index: 200;
+  max-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
+}
+
+/* ---- Empty state ---- */
+.empty {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text2);
+}
+
+.empty-icon { font-size: 40px; margin-bottom: 12px; opacity: .5; }

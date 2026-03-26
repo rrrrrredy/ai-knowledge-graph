@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>排行榜 · AI Knowledge Graph</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ranking-layout {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px 48px;
+    }
+
+    .page-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      color: var(--text2);
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+
+    /* Tab bar */
+    .tab-bar {
+      display: flex;
+      gap: 4px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      color: var(--text2);
+      font-size: 14px;
+      border-bottom: 2px solid transparent;
+      transition: var(--transition);
+      margin-bottom: -1px;
+    }
+
+    .tab:hover { color: var(--text); }
+
+    .tab.active {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Ranking list */
+    .ranking-list { display: flex; flex-direction: column; gap: 8px; }
+
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .rank-item:hover {
+      border-color: var(--accent);
+      background: var(--bg3);
+    }
+
+    .rank-num {
+      font-size: 20px;
+      font-weight: 700;
+      width: 36px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .rank-num.top1 { color: #ffd700; }
+    .rank-num.top2 { color: #c0c0c0; }
+    .rank-num.top3 { color: #cd7f32; }
+    .rank-num.other { color: var(--text3); font-size: 15px; }
+
+    .rank-info { flex: 1; min-width: 0; }
+
+    .rank-name {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .rank-desc {
+      font-size: 12px;
+      color: var(--text2);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rank-bar-wrap { width: 160px; flex-shrink: 0; }
+
+    .rank-bar-bg {
+      height: 6px;
+      background: var(--bg3);
+      border-radius: 3px;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .rank-bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.6s ease;
+    }
+
+    .rank-count {
+      font-size: 11px;
+      color: var(--text3);
+      text-align: right;
+    }
+
+    /* Loading state */
+    #ranking-content { min-height: 300px; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-brand">🔮 <span>AI</span> Knowledge Graph</div>
+  <div class="nav-links">
+    <a href="index.html">知识图谱</a>
+    <a href="ranking.html" class="active">排行榜</a>
+    <a href="browse.html">分类浏览</a>
+  </div>
+  <div class="nav-meta" id="nav-meta">加载中…</div>
+</nav>
+
+<div class="page">
+  <div class="ranking-layout">
+    <h1 class="page-title">🏆 排行榜</h1>
+    <p class="page-subtitle">基于知识库中的提及频次和关联关系数量综合排名</p>
+
+    <div class="tab-bar" id="tab-bar">
+      <div class="tab active" data-type="product">产品</div>
+      <div class="tab" data-type="company">公司/院校</div>
+      <div class="tab" data-type="person">人物</div>
+      <div class="tab" data-type="paper">论文</div>
+      <div class="tab" data-type="tech">技术概念</div>
+    </div>
+
+    <div id="ranking-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>加载中…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/ranking.js"></script>
+</body>
+</html>
