@@ -122,7 +122,7 @@ async function loadData() {
   document.getElementById('nav-meta').textContent =
     `更新于 ${meta.updatedAt || '2026-03-26'}`;
   document.getElementById('footer-meta').textContent =
-    `数据来源：美团 Friday 知识库 · ${meta.docCount || meta.total_docs || 212} 篇 · 最后更新 2026-03-26`;
+    ""
 
   // 统计核心节点数，更新开关标签
   const coreCount = allNodes.filter(n => (n.count || 0) >= MIN_COUNT).length;
