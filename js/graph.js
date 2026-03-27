@@ -121,8 +121,8 @@ async function loadData() {
   document.getElementById('stat-docs').textContent = (meta.docCount || meta.total_docs || '–').toLocaleString();
   document.getElementById('nav-meta').textContent =
     `更新于 ${meta.updatedAt || '2026-03-26'}`;
-  document.getElementById('footer-meta').textContent =
-    ""
+  const footerMeta = document.getElementById('footer-meta');
+  if (footerMeta) footerMeta.textContent = `更新于 ${meta.updatedAt || '2026-03-26'}`;
 
   // 统计核心节点数，更新开关标签
   const coreCount = allNodes.filter(n => (n.count || 0) >= MIN_COUNT).length;
