@@ -153,9 +153,7 @@ function renderMain(title, docs, nodes) {
     ).join('');
     const summary = doc.summary || '';
     const dateStr = doc.date ? `<span class="doc-date">${doc.date}</span>` : '';
-    const kmLink = doc.km_url
-      ? `<a class="doc-km-link" href="${doc.km_url}" target="_blank" onclick="event.stopPropagation()">原文 ↗</a>`
-      : '';
+
     return `<div class="doc-card" onclick="openDocDetail('${doc.id}')">
       <div class="doc-card-title">${doc.title || doc.id}</div>
       ${summary ? `<div class="doc-card-summary">${summary}</div>` : ''}
@@ -163,7 +161,6 @@ function renderMain(title, docs, nodes) {
         ${dateStr}
         <span class="doc-meta-stat">🧩 ${stats.entities} 个实体</span>
         <span class="doc-meta-stat">🔗 ${stats.relations} 条关系</span>
-        ${kmLink}
       </div>
       ${typeChips ? `<div class="doc-type-chips">${typeChips}</div>` : ''}
     </div>`;
@@ -202,9 +199,7 @@ window.openDocDetail = function(docId) {
     document.body.appendChild(drawer);
   }
 
-  const kmBtn = doc.km_url
-    ? `<a class="drawer-km-btn" href="${doc.km_url}" target="_blank">阅读原文 ↗</a>`
-    : '';
+
 
   drawer.innerHTML = `
     <div class="drawer-overlay" onclick="closeDocDrawer()"></div>
@@ -223,7 +218,6 @@ window.openDocDetail = function(docId) {
       <div class="drawer-entities">${entitiesHtml || '<div style="color:var(--text3)">暂无实体数据</div>'}</div>
       ${docNodes.length > 20 ? `<div class="drawer-more">…还有 ${docNodes.length - 20} 个实体</div>` : ''}
       <div class="drawer-actions">
-        ${kmBtn}
         <a class="drawer-graph-btn" href="index.html">在图谱中查看 →</a>
       </div>
     </div>`;
