@@ -349,5 +349,42 @@
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="js/graph.js"></script>
+
+<!-- Float entry: AI Q&A -->
+<a href="https://ai-knowledge-matrix.mynocode.host/" target="_blank" rel="noopener noreferrer" id="qa-float-btn" title="AI 知识问答">
+  <span class="qa-float-icon">💬</span>
+  <span class="qa-float-label">AI 问答</span>
+</a>
+<style>
+#qa-float-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 16px 9px 12px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 24px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transition: all 0.2s ease;
+  z-index: 900;
+  backdrop-filter: blur(8px);
+}
+#qa-float-btn:hover {
+  background: #1f2937;
+  border-color: #58a6ff;
+  color: #79c0ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(88,166,255,0.2);
+}
+.qa-float-icon { font-size: 15px; line-height: 1; }
+.qa-float-label { letter-spacing: 0.3px; }
+</style>
 </body>
 </html>
