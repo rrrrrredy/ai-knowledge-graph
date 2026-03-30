@@ -331,6 +331,28 @@
       <div id="right-ranking">
         <div style="padding:16px;color:var(--text3);font-size:12px">加载中…</div>
       </div>
+
+      <!-- 数据看板 -->
+      <div class="right-header" style="border-top:1px solid var(--border)">📊 数据看板</div>
+      <div class="dash-section">
+        <div class="dash-sub">话题分布 TOP8</div>
+        <div class="dash-bars" id="dash-bars">
+          <div class="dbar-row"><span class="dbar-label" title="大语言模型">大语言模型</span><div class="dbar-track"><div class="dbar-fill" style="width:100%"></div></div><span class="dbar-n">79</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="强化学习">强化学习</span><div class="dbar-track"><div class="dbar-fill" style="width:53%"></div></div><span class="dbar-n">42</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="AI Agent">AI Agent</span><div class="dbar-track"><div class="dbar-fill" style="width:49%"></div></div><span class="dbar-n">39</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="大模型">大模型</span><div class="dbar-track"><div class="dbar-fill" style="width:38%"></div></div><span class="dbar-n">30</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="多模态">多模态</span><div class="dbar-track"><div class="dbar-fill" style="width:30%"></div></div><span class="dbar-n">24</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="视频生成">视频生成</span><div class="dbar-track"><div class="dbar-fill" style="width:25%"></div></div><span class="dbar-n">20</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="开源模型">开源模型</span><div class="dbar-track"><div class="dbar-fill" style="width:25%"></div></div><span class="dbar-n">20</span></div>
+          <div class="dbar-row"><span class="dbar-label" title="多模态AI">多模态AI</span><div class="dbar-track"><div class="dbar-fill" style="width:20%"></div></div><span class="dbar-n">16</span></div>
+        </div>
+        <div class="dash-sub" style="margin-top:10px">热门机构 TOP8</div>
+        <div class="dash-entities">
+          <span class="dent top">OpenAI</span><span class="dent top">Anthropic</span><span class="dent top">字节跳动</span>
+          <span class="dent">Meta</span><span class="dent">DeepSeek</span><span class="dent">Google</span>
+          <span class="dent">英伟达</span><span class="dent">微软</span>
+        </div>
+      </div>
     </div>
 
   </div><!-- /graph-layout -->
@@ -385,6 +407,18 @@
 }
 .qa-float-icon { font-size: 15px; line-height: 1; }
 .qa-float-label { letter-spacing: 0.3px; }
+
+/* 数据看板 */
+.dash-section { padding: 10px 14px 14px; }
+.dash-sub { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+.dbar-row { display: flex; align-items: center; gap: 5px; margin-bottom: 5px; }
+.dbar-label { font-size: 10px; color: var(--text3); width: 60px; flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dbar-track { flex: 1; height: 5px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.dbar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #1f6feb, #58a6ff); }
+.dbar-n { font-size: 10px; color: var(--text3); width: 18px; text-align: right; flex-shrink: 0; }
+.dash-entities { display: flex; flex-wrap: wrap; gap: 4px; }
+.dent { font-size: 10px; padding: 2px 6px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; color: var(--text3); }
+.dent.top { border-color: #1f6feb; color: #58a6ff; }
 </style>
 </body>
 </html>
