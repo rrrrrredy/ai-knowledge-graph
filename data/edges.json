@@ -37474,5 +37474,119 @@
     "target": "4320",
     "type": "is_method_of",
     "doc_id": "2752477203"
+  },
+  {
+    "source": "2",
+    "target": "4395",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "11",
+    "target": "4396",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "3",
+    "target": "4397",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "192",
+    "target": "4398",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "3",
+    "target": "4400",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "701",
+    "target": "4401",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "4",
+    "target": "4402",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "3527",
+    "target": "4403",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "11",
+    "target": "4404",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "11",
+    "target": "4405",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "2",
+    "target": "4406",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "2",
+    "target": "4407",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "1",
+    "target": "4408",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "11",
+    "target": "4409",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "11",
+    "target": "4302",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "5",
+    "target": "4411",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "36",
+    "target": "4296",
+    "type": "made_by",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "4413",
+    "target": "4296",
+    "type": "uses",
+    "doc_id": "2753843131"
+  },
+  {
+    "source": "4395",
+    "target": "740",
+    "type": "extends",
+    "doc_id": "2753843131"
   }
 ]
