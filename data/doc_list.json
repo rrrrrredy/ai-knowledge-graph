@@ -1013,5 +1013,60 @@
     "id": "2475778276",
     "name": "OpenAI新产品及Self-Play RL最新信息202409",
     "url": "https://km.sankuai.com/collabpage/2475778276"
+  },
+  {
+    "id": "2759826337",
+    "name": "周论文推荐：李飞飞团队最新研究揭示多模态AI致命缺陷，DeepMind推出 Vision Banana，Jeff Dean新作，苹果新论文探讨大模型运作的最底层逻辑",
+    "url": "https://km.sankuai.com/collabpage/2759826337"
+  },
+  {
+    "id": "2759303657",
+    "name": "4月第4周：海外模型竞争转向算力与工作流，国内应用生态从工具走向交易",
+    "url": "https://km.sankuai.com/collabpage/2759303657"
+  },
+  {
+    "id": "2758386547",
+    "name": "周论文推荐：剑桥发布长期个性化记忆基准ATM-Bench，清华提出ControlAudio，Google提出全新P*拓扑结构分析方法，上交大论文梳理Agent记忆/技能/协议/Harness工程四大支柱",
+    "url": "https://km.sankuai.com/collabpage/2758386547"
+  },
+  {
+    "id": "2757129046",
+    "name": "4月第3周：海外加速争夺桌面与工作流入口，国内全面推进 Agent 与多模态落地",
+    "url": "https://km.sankuai.com/collabpage/2757129046"
+  },
+  {
+    "id": "2757411006",
+    "name": "周论文推荐：小红书、港科大等提出全新通用强化学习框架，智源开源 AI 智能体安全框架，北大、微信新研究，NUS/复旦/清华等联合推出大模型 Latent Space 综述",
+    "url": "https://km.sankuai.com/collabpage/2757411006"
+  },
+  {
+    "id": "2756722012",
+    "name": "4月第2周：海外Agent平台化浪潮加速，中国模型调用量连续五周全球称冠",
+    "url": "https://km.sankuai.com/collabpage/2756722012"
+  },
+  {
+    "id": "2755515079",
+    "name": "周论文推荐：阿里、Meta推理新研究，上海交大提出多智能体框架，快手广告推荐系统论文，DeepMind提出THFM模型",
+    "url": "https://km.sankuai.com/collabpage/2755515079"
+  },
+  {
+    "id": "2754389349",
+    "name": "4月第1周：海外平台控制权重构加速，国内 \"AI即服务\" 全场景闭环成型",
+    "url": "https://km.sankuai.com/collabpage/2754389349"
+  },
+  {
+    "id": "2754701360",
+    "name": "周论文推荐：多模态多篇论文，DeepMind新研究，北大清华联合多校提出LLM评估框架",
+    "url": "https://km.sankuai.com/collabpage/2754701360"
+  },
+  {
+    "id": "2753718656",
+    "name": "AI行业月度观察202603",
+    "url": "https://km.sankuai.com/collabpage/2753718656"
+  },
+  {
+    "id": "2753843131",
+    "name": "3月第4周：海外OpenClaw确立基础设施地位，国内龙虾生态卡位超级入口",
+    "url": "https://km.sankuai.com/collabpage/2753843131"
   }
 ]
